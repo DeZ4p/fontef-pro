@@ -13,7 +13,6 @@
 **Change your Android system font with a beautiful WebUI**
 
 </div>
----
 
 ## ✨ Features
 
