@@ -9,9 +9,12 @@
 [![Telegram](https://img.shields.io/badge/Telegram-@DeZ4p-06b6d4?style=for-the-badge)](https://t.me/DeZ4p)
 
 ---
+
 **Change your Android system font with a beautiful WebUI**
+
 </div>
 ---
+
 ## ✨ Features
 
 - 🎯 Universal font replacement for ALL Android devices
@@ -25,10 +28,14 @@
 - 📊 Device info display
 - 💾 Backup and Restore
 - 🗑️ Complete uninstall cleanup (zero traces)
+
 ---
+
 ## 🌍 Supported Languages
 🇺🇸 English | 🇮🇷 فارسی | 🇸🇦 العربية | 🇷🇺 Русский | 🇮🇩 Indonesia | 🇮🇳 हिंदी | 🇹🇷 Türkçe | 🇩🇪 Deutsch
+
 ---
+
 ## 📱 Supported Devices
 
 - Xiaomi / Poco / Redmi (MIUI, HyperOS)
