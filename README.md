@@ -1,4 +1,3 @@
-# fontef-pro
 # FontEF Pro
 
 Professional Font Manager Module for KernelSU with WebUI
