@@ -1,0 +1,65 @@
+<!--
+   FontEF Pro v1.0
+   Author: @DeZ4p | t.me/DeZ4p
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>FontEF Pro</title>
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{background:#060a14;color:#818cf8;font-family:system-ui,sans-serif;display:flex;align-items:center;justify-content:center;min-height:100vh;flex-direction:column;padding:20px;text-align:center}
+        .ld-logo{font-size:44px;animation:p 2s ease-in-out infinite}
+        .ld-title{font-size:20px;font-weight:800;margin:16px 0 4px;letter-spacing:-.5px}
+        .ld-sub{font-size:11px;color:#475569;margin-bottom:20px}
+        .ld-bar{width:180px;height:3px;background:rgba(99,102,241,.15);border-radius:10px;overflow:hidden}
+        .ld-fill{width:0%;height:100%;background:linear-gradient(90deg,#6366f1,#a78bfa);border-radius:10px;transition:width .3s}
+        .ld-status{font-size:11px;color:#64748b;margin-top:14px;min-height:16px}
+        .ld-err{color:#ef4444;font-size:12px;margin-top:12px;display:none;max-width:320px;line-height:1.6}
+        .ld-retry{margin-top:14px;padding:9px 24px;background:#6366f1;color:#fff;border:none;border-radius:8px;font-size:12px;font-weight:700;cursor:pointer;display:none}
+        .ld-retry:active{transform:scale(.96)}
+        @keyframes p{0%,100%{transform:scale(1)}50%{transform:scale(1.1)}}
+    </style>
+</head>
+<body>
+    <div class="ld-logo">🔤</div>
+    <div class="ld-title">FontEF Pro</div>
+    <div class="ld-sub">by @DeZ4p</div>
+    <div class="ld-bar"><div class="ld-fill" id="ldFill"></div></div>
+    <div class="ld-status" id="ldStatus">Connecting to server...</div>
+    <div class="ld-err" id="ldErr"></div>
+    <button class="ld-retry" id="ldRetry">Retry</button>
+    <script>
+    (function(){
+        var CDN='https://dez4p.github.io/fontef-cdn';
+        var fill=document.getElementById('ldFill');
+        var status=document.getElementById('ldStatus');
+        var errEl=document.getElementById('ldErr');
+        var retryBtn=document.getElementById('ldRetry');
+        function prog(p){fill.style.width=p+'%'}
+        function stat(t){status.textContent=t}
+        function showErr(m){errEl.textContent=m;errEl.style.display='block';retryBtn.style.display='inline-block'}
+        retryBtn.addEventListener('click',function(){errEl.style.display='none';retryBtn.style.display='none';loadRemote()});
+        function loadRemote(){
+            prog(10);stat('Connecting to server...');
+            var xhr=new XMLHttpRequest();
+            xhr.open('GET',CDN+'/ui.html?t='+Date.now(),true);
+            xhr.timeout=15000;
+            xhr.onprogress=function(e){if(e.lengthComputable&&e.total>0){prog(10+Math.floor((e.loaded/e.total)*60))}};
+            xhr.onload=function(){
+                if(xhr.status===200&&xhr.responseText&&xhr.responseText.length>100){
+                    prog(85);stat('Loading UI...');
+                    setTimeout(function(){prog(100);stat('Ready!');setTimeout(function(){document.open();document.write(xhr.responseText);document.close()},200)},100);
+                }else{showErr('Server returned invalid response.')}
+            };
+            xhr.onerror=function(){showErr('Cannot connect to server. Check your internet connection.')};
+            xhr.ontimeout=function(){showErr('Connection timed out.')};
+            try{xhr.send()}catch(e){showErr('Failed to start request.')}
+        }
+        loadRemote();
+    })();
+    </script>
+</body>
+</html>
