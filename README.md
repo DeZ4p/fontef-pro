@@ -13,7 +13,6 @@
 **Change your Android system font with a beautiful WebUI**
 
 </div>
----
 
 ## ✨ Features
 
@@ -29,12 +28,8 @@
 - 💾 Backup and Restore
 - 🗑️ Complete uninstall cleanup (zero traces)
 
----
-
 ## 🌍 Supported Languages
 🇺🇸 English | 🇮🇷 فارسی | 🇸🇦 العربية | 🇷🇺 Русский | 🇮🇩 Indonesia | 🇮🇳 हिंदी | 🇹🇷 Türkçe | 🇩🇪 Deutsch
-
----
 
 ## 📱 Supported Devices
 
@@ -45,8 +40,6 @@
 - Huawei / Honor (EMUI, HarmonyOS)
 - TECNO / Infinix (HiOS)
 - Any AOSP / Custom ROM (LineageOS, crDroid, PixelOS)
-
----
 
 ## 📥 Installation
 
@@ -59,19 +52,13 @@
 7. Tap Apply Font
 8. Reboot again
 
----
-
 ## 🔄 Auto Update
 
 FontEF Pro supports KernelSU auto-update. The module automatically checks for new versions.
 
----
-
 ## 🗑️ Uninstall
 
 When you uninstall FontEF Pro, ALL files, backups, temp data, overlay data and SD card files are completely removed. Zero traces left.
-
----
 
 ## 📜 Changelog
 
@@ -83,21 +70,15 @@ When you uninstall FontEF Pro, ALL files, backups, temp data, overlay data and S
 - meta-overlayfs support
 - Universal KSU root bridge
 
----
-
 ## 🔗 Links
 
 - 📱 Telegram: [@DeZ4p](https://t.me/DeZ4p)
 - 📦 Releases: [Download](https://github.com/DeZ4p/fontef-pro/releases)
 - 🌐 CDN: [fontef-cdn](https://github.com/DeZ4p/fontef-cdn)
 
----
-
 ## 📄 License
 
 MIT License
-
----
 
 <div align="center">
 
